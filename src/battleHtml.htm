@@ -4,16 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BattlePage</title>
-    <link rel="stylesheet" href="styleGame.css">
-    <script src="selectPokemon.js" defer></script>
+    <link rel="stylesheet" href="battleStyle.css">
+    <script src="battlePoke.js" defer></script>
 </head>
 <body>
-    <h2 id="displaySelectedPokemon">
+    <div id="battleMain">    
+        <div class="col"id="leftSide">
+            <h2 style="margin-left: 40%;">YOU</h2>
+            <div></div>
+            <h2 id="displaySelectedPokemon" style="margin-left: 35%;"></h2>
+            <div id="displayPlayerPokemon">
+                <img src="" alt=""id="playerImagePokemon"height="350"style="margin-left:15%;transform: scaleX(-1)">
+            </div>
+            <div class="hpBar"id="hpBarPlayer">
 
-    </h2>
-    <script>
-        const selectedPokemon = localStorage.getItem("selectedPokemon");
-        document.getElementById("displaySelectedPokemon").textContent = selectedPokemon;
-    </script>
-</body>
+            </div>
+            <div id="attackOption">
+
+            </div>
+        </div>
+        <div class="col"id="rightSide">
+            <h2 style="margin-left: 40%;">BOT</h2>
+            <h2 id="aiSelectedPokemonName"></h2>
+            <div id="displayAiPokemon">
+
+            </div>
+            <div class="hpBar"id="hpBarAi">
+
+            </div>
+        </div>
+    </div>
+    </body>
 </html>
