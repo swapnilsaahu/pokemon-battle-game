@@ -18,8 +18,11 @@ async function searchPokemons(nextPage){
             addImg.src = linkPokeJson.sprites.front_default;
             addPoke.appendChild(addImg);
             displayBox.appendChild(addPoke);
-            selectedPokemon=query;
-            nextPage();
+            const defaultSelection = document.getElementById("selectBtn"); 
+            defaultSelection.onclick = async function(getPokeJson){ 
+                        selectedPokemon=query; 
+                        nextPage();
+                    }
         });
 
         } 
@@ -70,7 +73,7 @@ async function defaultPokemons(nextPage){
                 } 
             }); 
 
-            const defaultSelection = document.getElementById("defaultSelection"); 
+            const defaultSelection = document.getElementById("selectBtn"); 
             defaultSelection.onclick = async function(getPokeJson){ 
                         selectedPokemon=pokeNames[i]; 
                         nextPage();
@@ -83,11 +86,10 @@ async function defaultPokemons(nextPage){
 }
 
 function toBattlePage(){
-    document.getElementById("selectBtn").onclick = () =>{
+    document.getElementById("defaultSelection").onclick = () =>{
         localStorage.setItem("selectedPokemon", selectedPokemon);
         window.location.href = "battleHtml.htm"
     }
-
     
 }
 
