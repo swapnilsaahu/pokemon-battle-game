@@ -20,3 +20,10 @@ html,body{
     flex: 50%;
     border: 2px solid black;
 }
+canvas{
+    border: 1px solid black;
+}
+
+#hpBarPlayer{
+    display: flex;
+}

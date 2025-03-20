@@ -13,3 +13,11 @@ async function displayPokemon(){
         console.log(error);
     }
 }
+
+async function attacks(){
+    try {
+        
+    } catch (error) {
+        console.error("there was an error fetching attacks")
+    }
+}
